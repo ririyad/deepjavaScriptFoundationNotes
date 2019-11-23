@@ -35,3 +35,19 @@ which is also historical thing (bug)
     - Undefined: We can have have variable that's been initilized that is undefined 
     - Undeclared: We can have a variable that has been never even created which is undeclared.
     - Uninitialized: We can have a variable that's never been initialized
+
+- `NaN` essentialy doesn't mean `Not a Number` but this special value indicated an invalid number
+
+- Consider the code:
+```javascript
+    var myCatsAge = Number("n/a") // "NaN"
+    myCatsAge === myCatsAge  // false (why?)
+    // beacuse according to IEEE, NaNs are not equal to each other.NaN is the only value that does not have 'identity property', meaning its not equal to itself. So, NaN is the only value that is not equal to itself 
+```
+- the `isNaN` utility coerces values to a `number` before checking the value
+- `Number.isNaN`, introduced in **ES6** to resolve the problem of NaN
+- According to IEEE-754 spec, the type of NaN is `numnber`, which is invalid. That's why:
+```javascript
+    typeOf NaN // "number"
+```
+- Negative Zero: Zero value with a sign bit on
