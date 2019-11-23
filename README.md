@@ -50,4 +50,4 @@ which is also historical thing (bug)
 ```javascript
     typeOf NaN // "number"
 ```
-- Negative Zero: Zero value with a sign bit on
+- Negative Zero: Zero value with a sign bit on, accroding to IEEE
